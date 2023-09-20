@@ -6,7 +6,7 @@
 
 #pageTitle {
     font-size: 100px;
-    position: fixed;
+    position: absolute;
     animation-name: smallBounce;
     animation-duration: 0.5s;
     animation-direction: alternate;
@@ -16,7 +16,12 @@
 }
 
 #videogamingButton {
-    position: fixed;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
 }
 
 #backgroundText {
@@ -66,5 +71,21 @@
     to {
         font-size: 90px;
         padding-top: .75em;
+    }
+}
+
+@keyframes rotateBackAndForth {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes resetRotation {
+    to {
+        transform: rotateZ(0deg);
     }
 }
