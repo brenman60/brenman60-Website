@@ -1,0 +1,91 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    background-color: darkslategrey;
+}
+
+#pageTitle {
+    font-size: 100px;
+    position: absolute;
+    animation-name: smallBounce;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier( .5, 0.05, 1, .5);
+    animation-play-state: running;
+}
+
+#videogamingButton {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+#backgroundText {
+    font-size: 100px;
+    font-weight: 600;
+    text-wrap: normal;
+    word-wrap: break-word;
+    position: fixed;
+    text-align: center;
+    text-anchor: middle;
+    z-index: -999;
+    user-select: none;
+    opacity: 0.05;
+    background-color: darkslategrey;
+
+    animation-name: backgroundTextLerp;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#backgroundCanvas {
+    z-index: -9999;
+}
+
+.defaultFont {
+    font-family: monospace, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes backgroundTextLerp {
+    from {
+        opacity: 0.05;
+    }
+    
+    to {
+        opacity: 0.08;
+    }
+}
+
+@keyframes smallBounce {
+    from {
+        font-size: 100px;
+        padding-top: 0em;
+    }
+
+    to {
+        font-size: 90px;
+        padding-top: .75em;
+    }
+}
+
+@keyframes rotateBackAndForth {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes resetRotation {
+    to {
+        transform: rotateZ(0deg);
+    }
+}

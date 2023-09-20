@@ -1,0 +1,42 @@
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bin\Debug\ReverseMap\resources.pri
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bin\Debug\AppxManifest.xml
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bin\Debug\JavaScript App.build.appxrecipe
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\JavaScript App.jsproj.CoreCompileInputs.cache
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\ResourceHandlingTask.state
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\priconfig.xml
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\priconfig.xml.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\unfiltered.layout.resfiles
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\unfiltered.layout.resfiles.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\filtered.layout.resfiles
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\filtered.layout.resfiles.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\excluded.layout.resfiles
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\excluded.layout.resfiles.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\resources.resfiles
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\resources.resfiles.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\pri.resfiles
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\pri.resfiles.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\qualifiers.txt
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\qualifiers.txt.intermediate
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\106611\source\repos\JavaScript App\JavaScript App\bld\Debug\ProjectArchitectures.txt
+D:\Websites\JavaScript App\JavaScript App\bin\Debug\ReverseMap\resources.pri
+D:\Websites\JavaScript App\JavaScript App\bin\Debug\AppxManifest.xml
+D:\Websites\JavaScript App\JavaScript App\bin\Debug\JavaScript App.build.appxrecipe
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\JavaScript App.jsproj.CoreCompileInputs.cache
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\ResourceHandlingTask.state
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\priconfig.xml
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\priconfig.xml.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\unfiltered.layout.resfiles
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\unfiltered.layout.resfiles.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\filtered.layout.resfiles
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\filtered.layout.resfiles.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\excluded.layout.resfiles
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\excluded.layout.resfiles.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\resources.resfiles
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\resources.resfiles.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\pri.resfiles
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\pri.resfiles.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\qualifiers.txt
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\qualifiers.txt.intermediate
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Websites\JavaScript App\JavaScript App\bld\Debug\ProjectArchitectures.txt
