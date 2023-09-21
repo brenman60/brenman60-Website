@@ -27,7 +27,6 @@
 #backgroundText {
     font-size: 100px;
     font-weight: 600;
-    text-wrap: normal;
     word-wrap: break-word;
     position: fixed;
     text-align: center;
