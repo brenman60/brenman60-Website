@@ -1,4 +1,4 @@
-﻿async function startButtonRotation(element) {
+﻿function startButtonRotation(element) {
     var randomRot_ = Math.round(Math.random());
     var randomRot = randomRot_ ? -2.5 : 2.5;
     element.style.transform = "rotate(" + randomRot + "deg)";
