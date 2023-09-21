@@ -66,6 +66,20 @@
     z-index: -9999;
 }
 
+#codingArea {
+    font-size: 40px;
+    background-color: darkslategrey;
+    color: darkcyan;
+    width: 80%;
+    height: 500px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 250px;
+    padding: 50px 50px 50px 50px;
+    resize: none;
+    border: 5px double darkcyan;
+}
+
 .defaultFont {
     font-family: monospace, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
