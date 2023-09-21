@@ -3,13 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>videogaming | brenman60</title>
-    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet"/>
     <noscript>JavaScript is not supported by this browser.</noscript>
     <script src="js/main.js"></script>
     <script src="js/codeType.js"></script>
+    <script src="js/mouseButtons.js"></script>
 </head>
 <body>
     <h1 id="pageTitle" class="defaultFont">typing</h1>
-    <textarea title="Title" id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
+    <textarea id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
+
+    <button id="homePageButton" class="defaultFont rotateHover" 
+            onmouseover="JavaScript: startButtonRotation(document.getElementById('homePageButton'));"
+            onmouseout="JavaScript: stopButtonRotation(document.getElementById('homePageButton'));"
+            onclick="JavaScript: loadNewPage('index.html');">
+    back</button>
 </body>
 </html>

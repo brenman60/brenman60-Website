@@ -43,6 +43,20 @@
     margin: 0px 0 0 -175px; /* first value is for y second for x */
 }
 
+#homePageButton {
+    background-color: cadetblue;
+    border: none;
+    color: darkslategrey;
+    font-size: 50px;
+    font-weight: bolder;
+    width: 350px;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 400px 0 0 -150px; /* first value is for y second for x */
+}
+
 #backgroundText {
     font-size: 100px;
     font-weight: 600;
@@ -76,8 +90,9 @@
     position: absolute;
     margin-top: 250px;
     padding: 50px 50px 50px 50px;
+    border: 1px solid slategrey;
     resize: none;
-    border: 5px double darkcyan;
+    outline: none;
 }
 
 .defaultFont {

@@ -1,9 +1,7 @@
-﻿function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function startButtonRotation(element) {
-    element.style.transform = "rotate(-2.5deg)";
+﻿async function startButtonRotation(element) {
+    var randomRot_ = Math.round(Math.random());
+    var randomRot = randomRot_ ? -2.5 : 2.5;
+    element.style.transform = "rotate(" + randomRot + "deg)";
     element.style.transition = "transform .5s linear";
 }
 
