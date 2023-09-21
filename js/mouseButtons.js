@@ -3,7 +3,7 @@
 }
 
 async function startButtonRotation(element) {
-    element.style.transform = "rotate(-7.5deg)";
+    element.style.transform = "rotate(-2.5deg)";
     element.style.transition = "transform .5s linear";
 }
 

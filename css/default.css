@@ -16,12 +16,13 @@
 }
 
 #videogamingButton {
-    width: 50px;
-    height: 50px;
+    font-size: 50px;
+    width: 350px;
+    height: 75px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -25px 0 0 -25px;
+    margin: -125px 0 0 -175px; /* first value is for y second for x */
 }
 
 #backgroundText {
@@ -69,22 +70,6 @@
 
     to {
         font-size: 90px;
-        padding-top: .75em;
-    }
-}
-
-@keyframes rotateBackAndForth {
-    from {
-        transform: rotate(45deg);
-    }
-
-    to {
-        transform: rotate(-45deg);
-    }
-}
-
-@keyframes resetRotation {
-    to {
-        transform: rotateZ(0deg);
+        padding-top: .25em;
     }
 }
