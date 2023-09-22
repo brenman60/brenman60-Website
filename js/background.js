@@ -23,8 +23,13 @@ function startLineDrawing() {
 }
 
 async function startLine(ctx) {
-    var lastPositionX = 0;
-    var lastPositionY = 0;
+    var startRandomX = randomIntFromInterval(-1000, 1000);
+    var startRandomY = randomIntFromInterval(-1000, 1000);
+
+    ctx.moveTo(startRandomX, startRandomY);
+
+    var lastPositionX = startRandomX;
+    var lastPositionY = startRandomY;
     while (!window.closed) {
         ctx.beginPath();
 

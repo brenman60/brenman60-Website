@@ -36,7 +36,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: 0px 0 0 -175px; /* first value is for y second for x */
+    margin-left:-175px; /* first value is for y second for x */
 }
 
 #homePageButton {
@@ -93,6 +93,7 @@
 
 .defaultFont {
     font-family: monospace, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-backface-visibility: hidden;
 }
 
 #lineCanvas {
@@ -114,7 +115,7 @@
 @keyframes smallBounce {
     from {
         font-size: 100px;
-        padding-top: 0em;
+        padding-top: initial;
     }
 
     to {
