@@ -1,23 +1,44 @@
-﻿function spawnCircles(count) {
-    const canvas = document.getElementById("backgroundCanvas");
-    const width = (canvas.width = window.innerWidth);
-    const height = (canvas.height = window.innerHeight);
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "rgb(0, 0, 0)";
-    ctx.fillRect(0, 0, width, height);
+﻿function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms)); // ms is should be formatted as 1 * 1000 (first number is amount of seconds to wait)
+}
 
-    for (var i = 0; i < count; i++) {
-        ctx.fillStyle = "yellow";
-        ctx.beginPath();
-        ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
-        ctx.lineTo(200, 106);
-        ctx.fill();
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-        simluateCircle();
+function startLineDrawing() {
+    const canvas = document.getElementById("lineCanvas");
 
+    if (!canvas.getContext) {
+        return;
+    }
+    const ctx = canvas.getContext('2d');
+
+    ctx.strokeStyle = 'darkcyan';
+    ctx.lineWidth = 25;
+
+    for (var i = 0; i < 25; i++) {
+        startLine(ctx);
     }
 }
 
-function simluateCircle(circle) {
+async function startLine(ctx) {
+    var lastPositionX = 0;
+    var lastPositionY = 0;
+    while (!window.closed) {
+        ctx.beginPath();
 
+        var randomX = randomIntFromInterval(-1000, 1000);
+        var randomY = randomIntFromInterval(-1000, 1000);
+
+        ctx.moveTo(lastPositionX, lastPositionY);
+        ctx.lineTo(lastPositionX + randomX, lastPositionY + randomY);
+        ctx.stroke();
+
+        lastPositionX += randomX;
+        lastPositionY += randomY;
+
+        console.log("Moved line: " + lastPositionX + " - " + lastPositionY);
+        await sleep(1 * 1000);
+    }
 }

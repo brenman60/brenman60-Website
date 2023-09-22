@@ -95,6 +95,12 @@
     font-family: monospace, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#lineCanvas {
+    opacity: 0.05;
+    width: 100%;
+    height: 100%;
+}
+
 @keyframes backgroundTextLerp {
     from {
         opacity: 0.05;

@@ -1,6 +1,6 @@
 var lastTypedIndex = 0;
 
-var allCodes =
+const allCodes =
     [
         'if (fullCodeString.length >= lastTypedIndex - 1) { \n document.getElementById("codingArea").innerHTML += fullCodeString[i]; \n } else { \n continue; \n }',
     ];
