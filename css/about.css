@@ -17,4 +17,6 @@
     left: 50%;
     margin-top: 150px;
     margin-left: -100px;
+
+    opacity: 0; /* remove later */
 }

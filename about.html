@@ -8,11 +8,18 @@
     <noscript>JavaScript is not supported by this browser.</noscript>
     <script src="js/main.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/mouseButton.js"></script>
 </head>
 <body onload="JavaScript: startLineDrawing();">
     <canvas id="lineCanvas"></canvas>
     <h1 id="pageTitle" class="defaultFont">about</h1>
     <h4 id="madeBy" class="defaultFont">made by brenman60</h4>
     <h6 id="madeByDesc" class="defaultFont">with many google searches</h6>
+
+    <button id="homePageButton" class="defaultFont rotateHover" 
+            onmouseover="JavaScript: startButtonRotation(document.getElementById('homePageButton'));"
+            onmouseout="JavaScript: stopButtonRotation(document.getElementById('homePageButton'));"
+            onclick="JavaScript: loadNewPage('index.html');">
+    back</button>
 </body>
 </html>
