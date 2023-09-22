@@ -15,23 +15,29 @@
     ">
 
     <!-- TO-DO:
-        * Change buttons to be in a list
         * Finish coding type page
         * Create snake game in JS
     -->
 
-    <span id="backgroundText"></span>
-    <h1 id="pageTitle" class="defaultFont">home</h1>
-    <button id="videogamingButton" class="defaultFont rotateHover" 
+    <span id="backgroundText"></span>  <!-- Background Text -->
+    <h1 id="pageTitle" class="defaultFont">home</h1>  <!-- Page Title -->
+
+    <button id="videogamingButton" class="defaultFont rotateHover defaultButton" 
             onmouseover="JavaScript: startButtonRotation(document.getElementById('videogamingButton'));"
             onmouseout="JavaScript: stopButtonRotation(document.getElementById('videogamingButton'));"
             onclick="JavaScript: loadNewPage('videogaming.html');">
-    videogaming</button>
+    videogaming</button> <!-- Videogaming Button -->
 
-    <button id="hackerTypeButton" class="defaultFont rotateHover" 
+    <button id="hackerTypeButton" class="defaultFont rotateHover defaultButton"
             onmouseover="JavaScript: startButtonRotation(document.getElementById('hackerTypeButton'));"
             onmouseout="JavaScript: stopButtonRotation(document.getElementById('hackerTypeButton'));"
             onclick="JavaScript: loadNewPage('codeTyping.html');">
-    typing</button>
+    typing</button> <!-- Typing Button -->
+
+    <button id="aboutButton" class="defaultFont rotateHover defaultButton"
+            onmouseover="JavaScript: startButtonRotation(document.getElementById('aboutButton'));"
+            onmouseout="JavaScript: stopButtonRotation(document.getElementById('aboutButton'));"
+            onclick="JavaScript: loadNewPage('about.html');">
+    about</button> <!-- About Button -->
 </body>
 </html>

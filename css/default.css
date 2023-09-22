@@ -15,14 +15,17 @@
     animation-play-state: running;
 }
 
-#videogamingButton {
+.defaultButton {
     background-color: cadetblue;
     border: none;
-    color: darkslategrey; 
+    color: darkslategrey;
     font-size: 50px;
     font-weight: bolder;
     width: 350px;
     height: 75px;
+}
+
+#videogamingButton {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,13 +33,6 @@
 }
 
 #hackerTypeButton {
-    background-color: cadetblue;
-    border: none;
-    color: darkslategrey;
-    font-size: 50px;
-    font-weight: bolder;
-    width: 350px;
-    height: 75px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,17 +40,17 @@
 }
 
 #homePageButton {
-    background-color: cadetblue;
-    border: none;
-    color: darkslategrey;
-    font-size: 50px;
-    font-weight: bolder;
-    width: 350px;
-    height: 75px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: 400px 0 0 -150px; /* first value is for y second for x */
+    margin: 400px 0 0 -175px; /* first value is for y second for x */
+}
+
+#aboutButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 300px 0 0 -175px; /* first value is for y second for x */
 }
 
 #backgroundText {
