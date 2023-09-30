@@ -101,6 +101,7 @@ StyleCopReport.xml
 *.jsproj.user
 *.sqlite
 *.wsuo
+slnx.sqlite
 
 # Chutzpah Test files
 _Chutzpah*
