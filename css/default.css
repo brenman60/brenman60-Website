@@ -39,6 +39,13 @@
     margin-left:-175px; /* first value is for y second for x */
 }
 
+#miscButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 125px 0 0 -175px; /* first value is for y second for x */
+}
+
 #homePageButton {
     position: absolute;
     top: 50%;
