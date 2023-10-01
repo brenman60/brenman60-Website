@@ -1,11 +1,12 @@
 ﻿body {
     display: flex;
     justify-content: center;
-    background-color: darkslategrey;
+    background-color: #25383C;
 }
 
 #pageTitle {
-    font-size: 100px;
+    font-size: 60px;
+    margin: 40px;
     position: absolute;
     animation-name: smallBounce;
     animation-duration: 0.5s;
@@ -16,48 +17,32 @@
 }
 
 .defaultButton {
-    background-color: cadetblue;
+    background-color: #5F9EA0;
     border: none;
-    color: darkslategrey;
-    font-size: 50px;
+    color: #25383C;
+    font-size: 30px;
     font-weight: bolder;
-    width: 350px;
-    height: 75px;
+    width: fit-content;
+    height: 50px;
+    padding: 0px 10px;
 }
 
-#videogamingButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -125px 0 0 -175px; /* first value is for y second for x */
+.listHideDots {
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-#hackerTypeButton {
+#taskbarItem {
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left:-175px; /* first value is for y second for x */
-}
-
-#miscButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 125px 0 0 -175px; /* first value is for y second for x */
-}
-
-#homePageButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 400px 0 0 -175px; /* first value is for y second for x */
-}
-
-#aboutButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 300px 0 0 -175px; /* first value is for y second for x */
+    top: 160px;
 }
 
 #backgroundText {
@@ -71,7 +56,6 @@
     user-select: none;
     opacity: 0.05;
     background-color: darkslategrey;
-
     animation-name: backgroundTextLerp;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -109,13 +93,15 @@
     height: 100%;
 }
 
+/* Animations */
+
 @keyframes backgroundTextLerp {
     from {
-        opacity: 0.05;
+        opacity: 0.08;
     }
     
     to {
-        opacity: 0.08;
+        opacity: 0.12;
     }
 }
 
@@ -126,7 +112,7 @@
     }
 
     to {
-        font-size: 90px;
-        padding-top: .25em;
+        font-size: 95px;
+        padding-top: .15em;
     }
 }

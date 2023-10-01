@@ -1,0 +1,17 @@
+#taskbarDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#taskbarDiv ul {
+    display: flex;
+}
+
+#taskbarItem li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#taskbarItem li::before {
+    content: "";
+}
