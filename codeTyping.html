@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>videogaming | brenman60</title>
+    <meta charset="utf-8"/>
+    <title>code type | brenman60</title>
+    <link href="css/universal.css" rel="stylesheet"/>
     <link href="css/default.css" rel="stylesheet"/>
     <noscript>JavaScript is not supported by this browser.</noscript>
     <script src="js/main.js"></script>
@@ -10,13 +11,53 @@
     <script src="js/mouseButtons.js"></script>
 </head>
 <body>
-    <h1 id="pageTitle" class="defaultFont">typing</h1>
-    <textarea id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
+    <!-- DEFAULT PAGE DIV -->
+    <div id="taskbarDiv">
+        <h1 id="pageTitle" class="defaultFont">code type</h1>  <!-- Page Title -->
+        <ul id="taskbarItem" class="listHideDots" style="padding: 0">
+            <li>
+                <button id="homeButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('homeButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('homeButton'));"
+                    onclick="JavaScript: loadNewPage('index.html');">
+                home</button> <!-- Home Button -->
+            </li>
 
-    <button id="homePageButton" class="defaultFont rotateHover" 
-            onmouseover="JavaScript: startButtonRotation(document.getElementById('homePageButton'));"
-            onmouseout="JavaScript: stopButtonRotation(document.getElementById('homePageButton'));"
-            onclick="JavaScript: loadNewPage('index.html');">
-    back</button>
+            <li>
+                <button id="videogamingButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('videogamingButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('videogamingButton'));"
+                    onclick="JavaScript: loadNewPage('videogaming.html');">
+                videogames</button> <!-- Videogames Button -->
+            </li>
+
+            <li>
+                <button id="hackerTypeButton" class="defaultFont rotateHover defaultButton"
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('hackerTypeButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('hackerTypeButton'));"
+                    onclick="JavaScript: loadNewPage('codeTyping.html');">
+                web games</button> <!-- Web games Button -->
+            </li>
+
+            <li>
+                <button id="miscButton" class="defaultFont rotateHover defaultButton"
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('miscButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('miscButton'));"
+                    onclick="JavaScript: loadNewPage('misc.html');">
+                misc</button> <!-- Misc Button -->
+            </li>
+
+            <li>
+                <button id="aboutButton" class="defaultFont rotateHover defaultButton"
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('aboutButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('aboutButton'));"
+                    onclick="JavaScript: loadNewPage('about.html');">
+                about</button> <!-- About Button -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
+    <textarea id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
 </body>
 </html>
