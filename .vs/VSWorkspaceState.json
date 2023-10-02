@@ -3,8 +3,9 @@
     "",
     "\\css",
     "\\images",
-    "\\js"
+    "\\js",
+    "\\template"
   ],
-  "SelectedNode": "\\images",
+  "SelectedNode": "\\js\\mouseButtons.js",
   "PreviewInSolutionExplorer": false
 }
