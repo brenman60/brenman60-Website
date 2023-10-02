@@ -3,6 +3,26 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function waitForElm(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
 async function loadNewPage(newPageLink) {
     if (newPageLink == "" || newPageLink == undefined) {
         throw new Error("Tried loading new page, but given link is empty or undefined!");
@@ -30,11 +50,7 @@ async function removeTitleText() {
 }
 
 async function loadTitleText(titleText) {
-    var title = undefined;
-    while (title == undefined) {
-        title = document.getElementById("pageTitle");
-        await sleep(.1 * 1000);
-    }
+    var title = await waitForElm(".pageTitle");
 
     for (var i = 0; i < titleText.length; i++) {
         title.innerHTML += titleText[i];
