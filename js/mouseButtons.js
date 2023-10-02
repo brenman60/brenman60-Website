@@ -9,3 +9,7 @@ function stopButtonRotation(element) {
     element.style.backgroundColor = "#5F9EA0";
     element.style.transition = "all .5s ease-in";
 }
+
+function buttonShockwave(element, intensity = 1, fadeTime = 1) {
+
+}
