@@ -33,6 +33,7 @@ async function loadTitleText(titleText) {
     var title = undefined;
     while (title == undefined) {
         title = document.getElementById("pageTitle");
+        await sleep(.1 * 1000);
     }
 
     for (var i = 0; i < titleText.length; i++) {
