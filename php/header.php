@@ -1,6 +1,4 @@
 <!-- i have never used PHP before so dont make fun of me too much -->
-
-<?php
 <div id="taskbarDiv">
     <h1 id="pageTitle" class="defaultFont"></h1>  <!-- Page Title -->
     <ul id="taskbarItem" class="listHideDots" style="padding: 0">
@@ -45,4 +43,3 @@
         </li>
     </ul>
 </div>
-?>
