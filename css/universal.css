@@ -17,5 +17,6 @@
 }
 
 #pageContent {
+    position: absolute;
     display: contents;
 }
