@@ -12,10 +12,13 @@
     <script src="js/background.js"></script>
     <script src="js/mouseButton.js"></script>
 </head>
-<body onload="JavaScript: 
+<body
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript: 
+    initializeShockwaveEffect();
     startLineDrawing(); 
-    loadTitleText('about');
-    ">    
+    loadTitleText('about');">    
 
     <script src="js/headerInclude.js"></script>
     <script> includeHeader(); </script>

@@ -11,9 +11,12 @@
     <script src="js/codeType.js"></script>
     <script src="js/mouseButtons.js"></script>
 </head>
-<body onload="JavaScript:
-    loadTitleText('code type');
-    ">
+<body
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript:
+    initializeShockwaveEffect();
+    loadTitleText('code type');">
 
     <script src="js/headerInclude.js"></script>
     <script> includeHeader(); </script>

@@ -10,9 +10,12 @@
     <script src="js/main.js"></script>
     <script src="js/mouseButtons.js"></script>
 </head>
-<body onload="JavaScript: 
-    loadTitleText('videogames');
-    ">
+<body 
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript: 
+    initializeShockwaveEffect();
+    loadTitleText('videogames');">
 
     <script src="js/headerInclude.js"></script>
     <script> includeHeader(); </script>
