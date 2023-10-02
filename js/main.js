@@ -49,10 +49,28 @@ async function removeTitleText() {
     }
 }
 
-async function loadTitleText(titleText) {
-    var title = await waitForElm(".pageTitle");
-    console.log(title);
-    var titleText = title.innerHTML;
+function loadTitleText(titleText) {
+    let observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (!mutation.addedNodes) return;
+            if (mutation.addedNodes.length != 3) return;
+
+            _loadTitleText(titleText);
+
+            observer.disconnect();
+        })
+    })
+
+    observer.observe(document.body, {
+        childList: true
+        , subtree: true
+        , attributes: false
+        , characterData: false
+    })
+}
+
+async function _loadTitleText(titleText) {
+    title = document.getElementById("pageTitle");
 
     for (var i = 0; i < titleText.length; i++) {
         title.innerHTML += titleText[i];

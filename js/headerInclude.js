@@ -4,6 +4,4 @@ function includeHeader() {
         .then(headerHtml => {
             document.querySelector('body').insertAdjacentHTML('afterbegin', headerHtml);
         });
-
-    loadTitleText();
 }

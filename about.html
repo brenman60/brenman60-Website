@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>about | brenman60</title>
+    <link rel="icon" href="images/icon.png"/>
     <link href="css/universal.css" rel="stylesheet"/>
     <link href="css/default.css" rel="stylesheet"/>
     <link href="css/about.css" rel="stylesheet"/>
@@ -11,52 +12,10 @@
     <script src="js/background.js"></script>
     <script src="js/mouseButton.js"></script>
 </head>
-<body onload="JavaScript: startLineDrawing(); loadTitleText('about');">
-    <!-- DEFAULT PAGE DIV -->
-    <div id="taskbarDiv">
-        <h1 id="pageTitle" class="defaultFont"></h1>  <!-- Page Title -->
-        <ul id="taskbarItem" class="listHideDots" style="padding: 0">
-            <li>
-                <button id="homeButton" class="defaultFont rotateHover defaultButton" 
-                    onmouseover="JavaScript: startButtonRotation(document.getElementById('homeButton'));"
-                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('homeButton'));"
-                    onclick="JavaScript: loadNewPage('index.html');">
-                home</button> <!-- Home Button -->
-            </li>
+<body onload="JavaScript: //startLineDrawing(); loadTitleText('about');">    
 
-            <li>
-                <button id="videogamingButton" class="defaultFont rotateHover defaultButton" 
-                    onmouseover="JavaScript: startButtonRotation(document.getElementById('videogamingButton'));"
-                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('videogamingButton'));"
-                    onclick="JavaScript: loadNewPage('videogaming.html');">
-                videogames</button> <!-- Videogames Button -->
-            </li>
-
-            <li>
-                <button id="hackerTypeButton" class="defaultFont rotateHover defaultButton"
-                    onmouseover="JavaScript: startButtonRotation(document.getElementById('hackerTypeButton'));"
-                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('hackerTypeButton'));"
-                    onclick="JavaScript: loadNewPage('codeTyping.html');">
-                web games</button> <!-- Web games Button -->
-            </li>
-
-            <li>
-                <button id="miscButton" class="defaultFont rotateHover defaultButton"
-                    onmouseover="JavaScript: startButtonRotation(document.getElementById('miscButton'));"
-                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('miscButton'));"
-                    onclick="JavaScript: loadNewPage('misc.html');">
-                misc</button> <!-- Misc Button -->
-            </li>
-
-            <li>
-                <button id="aboutButton" class="defaultFont rotateHover defaultButton"
-                    onmouseover="JavaScript: startButtonRotation(document.getElementById('aboutButton'));"
-                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('aboutButton'));"
-                    onclick="JavaScript: loadNewPage('about.html');">
-                about</button> <!-- About Button -->
-            </li>
-        </ul>
-    </div>
+    <script src="js/headerInclude.js"></script>
+    <script> includeHeader(); </script>
 
     <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
     <div id="pageContent">
