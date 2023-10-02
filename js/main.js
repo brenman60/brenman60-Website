@@ -51,6 +51,8 @@ async function removeTitleText() {
 
 async function loadTitleText(titleText) {
     var title = await waitForElm(".pageTitle");
+    console.log(title);
+    var titleText = title.innerHTML;
 
     for (var i = 0; i < titleText.length; i++) {
         title.innerHTML += titleText[i];
