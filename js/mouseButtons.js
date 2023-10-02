@@ -106,6 +106,7 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     shockwave.style.backgroundColor = "#65b8ba";
     shockwave.style.opacity = .5;
     shockwave.style.zIndex = 100;
+    shockwave.style.pointerEvents = "none";
     document.body.appendChild(shockwave);
 
     var shockwaveInfo = {
