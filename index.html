@@ -13,8 +13,14 @@
 </head>
 <body onload="
     JavaScript:
+    initializeShockwaveEffect();
     startBackground(document.getElementById('backgroundText'));
     loadTitleText('home');
+    buttonShockwave(
+    new Vector2(0, 0),
+    new Vector2(500, 500),
+    .5,
+    200);
     ">
 
     <script src="js/headerInclude.js"></script>
