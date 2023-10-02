@@ -36,9 +36,19 @@ async function initializeShockwaveEffect() {
                 continue;
             }
 
+            var sizeChange = ((100 * shockwave.getIntensity()) * deltaTime);
+
             // change sizes
-            shockwave.getElement().style.width += (1 * shockwave.getIntensity()) * deltaTime;
-            shockwave.getElement().style.height += (1 * shockwave.getIntensity()) * deltaTime;
+            var currentWidthNum = parseFloat(shockwave.getElement().style.width.toString().replace("px", ""));
+            var currentHeightNum = parseFloat(shockwave.getElement().style.height.toString().replace("px", ""));
+            shockwave.getElement().style.width = currentWidthNum + sizeChange + "px";
+            shockwave.getElement().style.height = currentHeightNum + sizeChange + "px";
+
+            // adjust positions to account for size change
+            var currentTopNum = parseFloat(shockwave.getElement().style.top.toString().replace("px", ""));
+            var currentLeftNum = parseFloat(shockwave.getElement().style.left.toString().replace("px", ""));
+            shockwave.getElement().style.top = (currentTopNum - (sizeChange / 2)) + "px";
+            shockwave.getElement().style.left = (currentLeftNum - (sizeChange / 2)) + "px";
 
             // getTime() for fadeTime
             shockwave.setTime(deltaTime);
@@ -48,7 +58,6 @@ async function initializeShockwaveEffect() {
                 if (shockwave.getElement().style.opacity <= 0) {
                     shockwave.getElement().remove();
                     shockwaves[shockwave_] = undefined;
-                    console.log("done with shockwave: " + shockwave_);
                 }
             }
         }
@@ -90,8 +99,8 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
     shockwave.style.position = "fixed";
-    // READD THIS FOR POSITIONING
-    //shockwave.style.margin = position.x + '' + position.y;
+    shockwave.style.top = (position.y - size.y / 2) + "px";
+    shockwave.style.left = (position.x - size.x / 2) + "px";
     shockwave.style.width = size.x + "px";
     shockwave.style.height = size.y + "px";
     shockwave.style.backgroundColor = "#65b8ba";
@@ -122,4 +131,16 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     }
 
     shockwaves.push(shockwaveInfo);
+}
+
+var mouseX;
+var mouseY;
+
+function updateMouseCoords(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+}
+
+function spawnShockAtMouse() {
+    buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(5, 5), .75, .025);
 }
