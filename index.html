@@ -11,14 +11,14 @@
     <script src="js/codeBackground.js"></script>
     <script src="js/mouseButtons.js"></script>
 </head>
-<body onload="
+<body 
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="
     JavaScript:
     initializeShockwaveEffect();
     startBackground(document.getElementById('backgroundText'));
-    loadTitleText('home');"
-    onmousemove="JavaScript: updateMouseCoords(event);"
-    onmousedown="JavaScript: spawnShockAtMouse();"
-    >
+    loadTitleText('home');">
 
     <script src="js/headerInclude.js"></script>
     <script> includeHeader(); </script>
