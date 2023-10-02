@@ -11,7 +11,7 @@
     <script src="js/background.js"></script>
     <script src="js/mouseButton.js"></script>
 </head>
-<body onload="JavaScript: startLineDrawing();">
+<body onload="JavaScript: startLineDrawing(); loadTitleText();">
     <!-- DEFAULT PAGE DIV -->
     <div id="taskbarDiv">
         <h1 id="pageTitle" class="defaultFont">about</h1>  <!-- Page Title -->
@@ -59,8 +59,10 @@
     </div>
 
     <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
-    <canvas id="lineCanvas"></canvas>
-    <h4 id="madeBy" class="defaultFont">made by brenman60</h4>
-    <h6 id="madeByDesc" class="defaultFont">with many google searches</h6>
+    <div id="pageContent">
+        <canvas id="lineCanvas"></canvas>
+        <h4 id="madeBy" class="defaultFont">made by brenman60</h4>
+        <h6 id="madeByDesc" class="defaultFont">with many google searches</h6>
+    </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
     <script src="js/codeType.js"></script>
     <script src="js/mouseButtons.js"></script>
 </head>
-<body>
+<body onload="JavaScript: loadTitleText();">
     <!-- DEFAULT PAGE DIV -->
     <div id="taskbarDiv">
         <h1 id="pageTitle" class="defaultFont">code type</h1>  <!-- Page Title -->
@@ -58,6 +58,8 @@
     </div>
 
     <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
-    <textarea id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
+    <div id="pageContent">
+        <textarea id="codingArea" class="defaultFont" contenteditable="false" onkeydown="JavaScript: typeCode();" readonly></textarea>
+    </div>
 </body>
 </html>

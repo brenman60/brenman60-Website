@@ -1,5 +1,6 @@
 #taskbarDiv {
     display: flex;
+    position: page;
     justify-content: center;
 }
 
