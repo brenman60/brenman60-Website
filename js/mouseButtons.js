@@ -90,6 +90,7 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
     shockwave.style.position = "fixed";
+    // READD THIS FOR POSITIONING
     //shockwave.style.margin = position.x + '' + position.y;
     shockwave.style.width = size.x + "px";
     shockwave.style.height = size.y + "px";
