@@ -29,10 +29,8 @@ async function removeTitleText() {
     }
 }
 
-async function loadTitleText() {
+async function loadTitleText(titleText) {
     var title = document.getElementById("pageTitle");
-    var titleText = title.innerHTML;
-    title.innerHTML = "";
 
     for (var i = 0; i < titleText.length; i++) {
         title.innerHTML += titleText[i];

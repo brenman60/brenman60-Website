@@ -50,6 +50,7 @@
     font-weight: 600;
     word-wrap: break-word;
     position: fixed;
+    left: 0%;
     text-align: center;
     text-anchor: middle;
     z-index: -999;

@@ -1,6 +1,5 @@
 #taskbarDiv {
     display: flex;
-    position: page;
     justify-content: center;
 }
 
@@ -15,4 +14,8 @@
 
 #taskbarItem li::before {
     content: "";
+}
+
+#pageContent {
+    display: contents;
 }
