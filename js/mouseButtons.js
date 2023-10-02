@@ -19,6 +19,7 @@ function makeStruct(names) {
 var Vector2 = makeStruct("x y");
 var lastTimeFrame;
 
+// once called once, this function should run until the page's window is closed
 async function initializeShockwaveEffect() {
     if (shockwaveInitialized) {
         return;
@@ -40,7 +41,7 @@ async function initializeShockwaveEffect() {
             shockwave.getElement().style.height += (1 * shockwave.getIntensity()) * deltaTime;
 
             // getTime() for fadeTime
-            shockwave.setTime(-deltaTime);
+            shockwave.setTime(deltaTime);
 
             if (shockwave.getTime() >= shockwave.getFadeTime()) {
                 shockwave.getElement().style.opacity -= 1 * deltaTime;
@@ -63,7 +64,7 @@ async function initializeShockwaveEffect() {
 
         lastTimeFrame = currentTime;
 
-        await sleep(.1 * 1000);
+        await sleep(.025 * 1000);
     }
     while (!window.closed);
 }
@@ -82,16 +83,19 @@ function stopButtonRotation(element) {
 
 function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     if (!shockwaveInitialized) {
-        alert("Shockwave Effect called, but it is not initialzed.");
+        alert("Shockwave effect called, but it is not initialzed.");
         return;
     }
 
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
-    shockwave.style.position = "absolute";
-    shockwave.style.margin = position.x + '' + position.y;
-    shockwave.style.width = size.x;
-    shockwave.style.height = size.y;
+    shockwave.style.position = "fixed";
+    //shockwave.style.margin = position.x + '' + position.y;
+    shockwave.style.width = size.x + "px";
+    shockwave.style.height = size.y + "px";
+    shockwave.style.backgroundColor = "#65b8ba";
+    shockwave.style.opacity = .5;
+    shockwave.style.zIndex = 100;
     document.body.appendChild(shockwave);
 
     var shockwaveInfo = {
