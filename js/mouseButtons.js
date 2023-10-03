@@ -19,63 +19,53 @@ function makeStruct(names) {
 var Vector2 = makeStruct("x y");
 var lastTimeFrame;
 
-// once called once, this function should run until the page's window is closed
-async function initializeShockwaveEffect() {
-    if (shockwaveInitialized) {
-        return;
-    }
-
-    shockwaveInitialized = true;
-
-    do {
-        var currentTime = Date.now();
-        var deltaTime = (currentTime - lastTimeFrame) / 1000;
-        for (var shockwave_ = 0; shockwave_ < shockwaves.length; shockwave_++) {
-            var shockwave = shockwaves[shockwave_]; // shockwaveInfo variable (something like intensity can be accessed with shockwave.getIntensity())
-            if (shockwave == undefined) {
-                continue;
-            }
-
-            var sizeChange = ((100 * shockwave.getIntensity()) * deltaTime);
-
-            // change sizes
-            var currentWidthNum = parseFloat(shockwave.getElement().style.width.toString().replace("px", ""));
-            var currentHeightNum = parseFloat(shockwave.getElement().style.height.toString().replace("px", ""));
-            shockwave.getElement().style.width = currentWidthNum + sizeChange + "px";
-            shockwave.getElement().style.height = currentHeightNum + sizeChange + "px";
-
-            // adjust positions to account for size change
-            var currentTopNum = parseFloat(shockwave.getElement().style.top.toString().replace("px", ""));
-            var currentLeftNum = parseFloat(shockwave.getElement().style.left.toString().replace("px", ""));
-            shockwave.getElement().style.top = (currentTopNum - (sizeChange / 2)) + "px";
-            shockwave.getElement().style.left = (currentLeftNum - (sizeChange / 2)) + "px";
-
-            // getTime() for fadeTime
-            shockwave.setTime(deltaTime);
-
-            if (shockwave.getTime() >= shockwave.getFadeTime()) {
-                shockwave.getElement().style.opacity -= 1 * deltaTime;
-                if (shockwave.getElement().style.opacity <= 0) {
-                    shockwave.getElement().remove();
-                    shockwaves[shockwave_] = undefined;
-                }
-            }
+function updateShockwaves() {
+    var currentTime = Date.now();
+    var deltaTime = (currentTime - lastTimeFrame) / 1000;
+    for (var shockwave_ = 0; shockwave_ < shockwaves.length; shockwave_++) {
+        var shockwave = shockwaves[shockwave_]; // shockwaveInfo variable (something like intensity can be accessed with shockwave.getIntensity())
+        if (shockwave == undefined) {
+            continue;
         }
 
-        var newShockwaveArray = [];
-        for (var shockwave_ = 0; shockwave_ < shockwaves.length; shockwave_++) {
-            if (shockwaves[shockwave_] != undefined) {
-                newShockwaveArray.push(shockwaves[shockwave_]);
+        var sizeChange = ((100 * shockwave.getIntensity()) * deltaTime);
+
+        // change sizes
+        var currentWidthNum = parseFloat(shockwave.getElement().style.width.toString().replace("px", ""));
+        var currentHeightNum = parseFloat(shockwave.getElement().style.height.toString().replace("px", ""));
+        shockwave.getElement().style.width = currentWidthNum + sizeChange + "px";
+        shockwave.getElement().style.height = currentHeightNum + sizeChange + "px";
+
+        // adjust positions to account for size change
+        var currentTopNum = parseFloat(shockwave.getElement().style.top.toString().replace("px", ""));
+        var currentLeftNum = parseFloat(shockwave.getElement().style.left.toString().replace("px", ""));
+        shockwave.getElement().style.top = (currentTopNum - (sizeChange / 2)) + "px";
+        shockwave.getElement().style.left = (currentLeftNum - (sizeChange / 2)) + "px";
+
+        // getTime() for fadeTime
+        shockwave.setTime(deltaTime);
+
+        if (shockwave.getTime() >= shockwave.getFadeTime()) {
+            shockwave.getElement().style.opacity -= 1 * deltaTime;
+            if (shockwave.getElement().style.opacity <= 0) {
+                shockwave.getElement().remove();
+                shockwaves[shockwave_] = undefined;
             }
         }
-
-        shockwaves = newShockwaveArray;
-
-        lastTimeFrame = currentTime;
-
-        await sleep(.025 * 1000);
     }
-    while (!window.closed);
+
+    var newShockwaveArray = [];
+    for (var shockwave_ = 0; shockwave_ < shockwaves.length; shockwave_++) {
+        if (shockwaves[shockwave_] != undefined) {
+            newShockwaveArray.push(shockwaves[shockwave_]);
+        }
+    }
+
+    shockwaves = newShockwaveArray;
+
+    lastTimeFrame = currentTime;
+
+    window.requestAnimationFrame(updateShockwaves);
 }
 
 function startButtonRotation(element) {
@@ -90,11 +80,11 @@ function stopButtonRotation(element) {
     element.style.transition = "all .5s ease-in";
 }
 
-function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
-    if (!shockwaveInitialized) {
+function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpacity = -1) {
+    /*if (!shockwaveInitialized) {
         alert("Shockwave effect called, but it is not initialzed.");
         return;
-    }
+    }*/
 
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
@@ -104,7 +94,7 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     shockwave.style.width = size.x + "px";
     shockwave.style.height = size.y + "px";
     shockwave.style.backgroundColor = "#65b8ba";
-    shockwave.style.opacity = .5;
+    shockwave.style.opacity = customOpacity == -1 ? .5 : customOpacity;
     shockwave.style.zIndex = 100;
     shockwave.style.pointerEvents = "none";
     document.body.appendChild(shockwave);
@@ -157,3 +147,5 @@ window.addEventListener("mousemove", function (e) {
 window.addEventListener("mousedown", function () {
     spawnShockAtMouse();
 });
+
+window.requestAnimationFrame(updateShockwaves);
