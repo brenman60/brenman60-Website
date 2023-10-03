@@ -145,12 +145,10 @@ function updateMouseCoords(e) {
 }
 
 function spawnShockAtMouse() {
-    console.log("0");
     /*if (mouseX == undefined || mouseY == undefined) {
         return;
     }*/
 
-    console.log("1");
     buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(5, 5), .75, .025);
 }
 
@@ -159,6 +157,5 @@ window.addEventListener("mousemove", function (e) {
 });
 
 window.addEventListener("mousedown", function () {
-    console.log("-1");
     spawnShockAtMouse();
 });
