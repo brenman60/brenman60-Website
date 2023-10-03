@@ -91,8 +91,6 @@ function stopButtonRotation(element) {
 }
 
 function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
-    console.log("shockling");
-
     if (!shockwaveInitialized) {
         alert("Shockwave effect called, but it is not initialzed.");
         return;

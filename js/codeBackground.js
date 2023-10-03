@@ -43,11 +43,11 @@ async function startBackground(backgroundElement) {
             original.splice(i, 0, selectedLine[i]);
             original = original.join("");
             backgroundElement.innerHTML = original;
-            await sleep(.025 * 1000);
+            await sleep(.015 * 1000);
         }
 
         backgroundElement.innerHTML = backgroundElement.innerHTML.substring(0, screen.width);
-        await sleep(.25 * 1000);
+        await sleep(.15 * 1000);
     }
     while (!window.closed);
 }

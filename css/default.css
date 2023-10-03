@@ -102,11 +102,11 @@
 
 @keyframes backgroundTextLerp {
     from {
-        opacity: 0.08;
+        opacity: 0.04;
     }
     
     to {
-        opacity: 0.12;
+        opacity: 0.06;
     }
 }
 
