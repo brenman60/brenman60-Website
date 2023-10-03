@@ -14,6 +14,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier( .5, 0.05, 1, .5);
     animation-play-state: running;
+    user-select: none;
 }
 
 .defaultButton {

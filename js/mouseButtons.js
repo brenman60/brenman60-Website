@@ -91,6 +91,8 @@ function stopButtonRotation(element) {
 }
 
 function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
+    console.log("shockling");
+
     if (!shockwaveInitialized) {
         alert("Shockwave effect called, but it is not initialzed.");
         return;
@@ -134,8 +136,8 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1) {
     shockwaves.push(shockwaveInfo);
 }
 
-var mouseX;
-var mouseY;
+var mouseX = undefined;
+var mouseY = undefined;
 
 function updateMouseCoords(e) {
     mouseX = e.clientX;
@@ -143,5 +145,20 @@ function updateMouseCoords(e) {
 }
 
 function spawnShockAtMouse() {
+    console.log("0");
+    /*if (mouseX == undefined || mouseY == undefined) {
+        return;
+    }*/
+
+    console.log("1");
     buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(5, 5), .75, .025);
 }
+
+window.addEventListener("mousemove", function (e) {
+    updateMouseCoords(e);
+});
+
+window.addEventListener("mousedown", function () {
+    console.log("-1");
+    spawnShockAtMouse();
+});
