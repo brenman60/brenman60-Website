@@ -12,11 +12,27 @@
     margin: 0 10px;
 }
 
+#subTaskbarItem li {
+    display: inline;
+    margin: 0 10px;
+}
+
 #taskbarItem li::before {
+    content: "";
+}
+
+#subTaskbarItem li::before {
     content: "";
 }
 
 #pageContent {
     position: absolute;
     display: contents;
+}
+
+.listHideDots {
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }

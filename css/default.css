@@ -29,13 +29,6 @@
     user-select: none;
 }
 
-.listHideDots {
-    list-style-position: inside;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
 #taskbarItem {
     list-style-type: disc;
     margin-block-start: 1em;
