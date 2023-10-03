@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\images",
-    "\\js",
-    "\\template"
+    "\\js"
   ],
-  "SelectedNode": "\\js\\mouseButtons.js",
+  "SelectedNode": "\\js\\codeBackground.js",
   "PreviewInSolutionExplorer": false
 }

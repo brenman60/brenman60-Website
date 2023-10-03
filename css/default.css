@@ -26,6 +26,7 @@
     width: fit-content;
     height: 50px;
     padding: 0px 10px;
+    user-select: none;
 }
 
 .listHideDots {
