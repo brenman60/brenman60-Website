@@ -85,3 +85,13 @@ function bounceTitle(titleElement) {
 function unbounceTitle(titleElement) {
     titleElement.style.animationPlayState = "paused";
 }
+
+document.addEventListener("onload", function () {
+    //switch (document.namespaceURI) {
+
+    //}
+
+    console.log(document.namespaceURI);
+
+    loadTitleText("test");
+});
