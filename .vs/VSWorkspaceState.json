@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\js"
+    "\\css",
+    "\\js",
+    "\\template"
   ],
-  "SelectedNode": "\\js\\codeBackground.js",
+  "SelectedNode": "\\codeTyping.html",
   "PreviewInSolutionExplorer": false
 }
