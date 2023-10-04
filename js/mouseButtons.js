@@ -81,11 +81,6 @@ function stopButtonRotation(element) {
 }
 
 function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpacity = -1) {
-    /*if (!shockwaveInitialized) {
-        alert("Shockwave effect called, but it is not initialzed.");
-        return;
-    }*/
-
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
     shockwave.style.position = "fixed";
@@ -133,9 +128,9 @@ function updateMouseCoords(e) {
 }
 
 function spawnShockAtMouse() {
-    /*if (mouseX == undefined || mouseY == undefined) {
+    if (mouseX == undefined || mouseY == undefined) {
         return;
-    }*/
+    }
 
     buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(5, 5), .75, .025);
 }

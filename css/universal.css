@@ -36,3 +36,18 @@
     padding: 0;
     margin: 0;
 }
+
+#contentList {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 300px;
+    right: 50%;
+}
+
+.contentListItem {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    margin: 0 10px;
+}
