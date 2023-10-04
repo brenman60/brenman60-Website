@@ -9,9 +9,10 @@ async function startSplashes() {
         var y = Math.floor(Math.random() * window.innerHeight);
         var newSize = Math.floor(Math.random() * 50);
         var intensity = Math.random() * 2.5;
-        var fadeTime = Math.random() * 5;
+        var fadeTime = Math.random() * 2;
         var opacity = Math.random() * 0.005;
-        buttonShockwave(new Vector2(x, y), new Vector2(newSize, newSize), intensity, fadeTime, opacity);
+        var fadeSpeed = Math.random() * 0.01;
+        buttonShockwave(new Vector2(x, y), new Vector2(newSize, newSize), intensity, fadeTime, opacity, fadeSpeed);
 
         await sleep(.025 * 1000);
     }

@@ -46,7 +46,11 @@ function updateShockwaves() {
         shockwave.setTime(deltaTime);
 
         if (shockwave.getTime() >= shockwave.getFadeTime()) {
-            shockwave.getElement().style.opacity -= 1 * deltaTime;
+            if (shockwave.getCustomFadeSpeed() == -1)
+                shockwave.getElement().style.opacity -= 1 * deltaTime;
+            else
+                shockwave.getElement().style.opacity -= shockwave.getCustomFadeSpeed() * deltaTime;
+
             if (shockwave.getElement().style.opacity <= 0) {
                 shockwave.getElement().remove();
                 shockwaves[shockwave_] = undefined;
@@ -80,7 +84,7 @@ function stopButtonRotation(element) {
     element.style.transition = "all .5s ease-in";
 }
 
-function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpacity = -1) {
+function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpacity = -1, customFadeSpeed = -1) {
     var shockwave = document.createElement("div");
     shockwave.className = "shockwaveEffect";
     shockwave.style.position = "fixed";
@@ -98,6 +102,7 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpac
         'element': shockwave,
         'i': intensity,
         'f': fadeTime,
+        'fs': customFadeSpeed,
         't': 0,
         'getElement': function () {
             return this.element;
@@ -107,6 +112,9 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpac
         },
         'getFadeTime': function() {
             return this.f;
+        },
+        'getCustomFadeSpeed': function() {
+            return this.fs;
         },
         'getTime': function() {
             return this.t;

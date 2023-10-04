@@ -25,6 +25,10 @@
     content: "";
 }
 
+#subTaskbarItem li::after {
+    content: "";
+}
+
 #pageContent {
     position: absolute;
     display: contents;
