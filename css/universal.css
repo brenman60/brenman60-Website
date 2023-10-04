@@ -15,6 +15,7 @@
 #subTaskbarItem li {
     display: inline;
     margin: 0 10px;
+    font-size: 0px;
 }
 
 #taskbarItem li::before {
