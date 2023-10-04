@@ -10,16 +10,24 @@ async function loadNewPage(newPageLink) {
         throw new Error("Tried loading new page, but given link is empty or undefined!");
     }
 
-    // fade page content
-    var pageContent = document.getElementById("pageContent");
-    pageContent.style.opacity = 0;
-    pageContent.style.transition = "opacity .6s ease-out";
+    window.requestAnimationFrame(everythingTransparent);
 
     await removeTitleText();
 
     await sleep(.75 * 1000);
 
     window.location.href = newPageLink;
+}
+
+var lastTimeFrame;
+async function everythingTransparent() {
+    var pageContent = document.getElementById("pageContent");
+    var currentTime = Date.now();
+    var deltaTime = (currentTime - lastTimeFrame) / 1000;
+
+    pageContent.style.opacity -= .1 * deltaTime;
+
+    window.requestAnimationFrame(everythingTransparent);
 }
 
 async function removeTitleText() {
