@@ -1,4 +1,4 @@
-﻿var pageName = "none";
+﻿var pageName;
 
 // Usually structed as await sleep(1 * 1000); The one in this example is the number of seconds the script will await.
 function sleep(ms) {
@@ -52,13 +52,20 @@ async function removeTitleText() {
 }
 
 function loadTitleText(titleText) {
+    console.log("Setting title text");
     pageName = titleText;
 }
 
-async function _loadTitleText(titleText, title) {
-    for (var i = 0; i < titleText.length; i++) {
-        title.innerHTML += titleText[i];
-        await sleep((.35 / titleText.length) * 1000);
+async function _loadTitleText(title) {
+    console.log("Loading title text");
+    do {
+        await sleep(.25 * 1000);
+    }
+    while (pageName == undefined);
+
+    for (var i = 0; i < pageName.length; i++) {
+        title.innerHTML += pageName[i];
+        await sleep((.35 / pageName.length) * 1000);
     }
 }
 
