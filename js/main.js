@@ -1,4 +1,6 @@
-﻿// Usually structed as await sleep(1 * 1000); The one in this example is the number of seconds the script will await.
+﻿var pageName = "none";
+
+// Usually structed as await sleep(1 * 1000); The one in this example is the number of seconds the script will await.
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -50,28 +52,10 @@ async function removeTitleText() {
 }
 
 function loadTitleText(titleText) {
-    let observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (!mutation.addedNodes) return;
-            if (mutation.addedNodes.length != 3) return;
-
-            _loadTitleText(titleText);
-
-            observer.disconnect();
-        })
-    })
-
-    observer.observe(document.body, {
-        childList: true
-        , subtree: true
-        , attributes: false
-        , characterData: false
-    })
+    pageName = titleText;
 }
 
-async function _loadTitleText(titleText) {
-    title = document.getElementById("pageTitle");
-
+async function _loadTitleText(titleText, title) {
     for (var i = 0; i < titleText.length; i++) {
         title.innerHTML += titleText[i];
         await sleep((.35 / titleText.length) * 1000);
