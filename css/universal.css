@@ -47,12 +47,12 @@
     position: fixed;
     justify-content: center;
     top: 300px;
-    right: 50%;
 }
 
 .contentListItem {
     display: flex;
-    width: 400px;
+    width: 1200px;
     height: 300px;
-    margin: 0 10px;
+    margin: 20px 10px;
+    background-color: #213438;
 }
