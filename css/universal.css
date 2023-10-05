@@ -44,7 +44,7 @@
 
 #contentList {
     display: flex;
-    position: fixed;
+    position: absolute;
     justify-content: center;
     top: 250px;
     width: 80%;
@@ -63,4 +63,19 @@
     height: 300px;
     margin: 20px 10px;
     background-color: #213438;
+}
+
+.contentListIcon {
+    display: grid;
+    margin: 15px 15px 15px 15px;
+}
+
+.contentListTitle {
+    display: inline-block;
+    text-align: left;
+    font-size: 50px;
+    /*max-width: 540px;*/
+    max-height: 120px;
+    margin-top: 10px;
+    overflow: hidden;
 }
