@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8"/>
-    <title>videogames | brenman60</title>
+    <title>played games | brenman60</title>
     <link rel="icon" href="images/icon.png"/>
     <link href="css/videogaming.css" rel="stylesheet"/>
     <link href="css/universal.css" rel="stylesheet"/>
@@ -16,7 +16,7 @@
     onmousemove="JavaScript: updateMouseCoords(event);"
     onmousedown="JavaScript: spawnShockAtMouse();"
     onload="JavaScript:
-    loadTitleText('videogames');
+    loadTitleText('played videogames');
     startSplashes();">
 
     <script src="js/headerInclude.js"></script>
@@ -41,6 +41,19 @@
                 some good games</button> <!-- Cool Games Button -->
             </li>
         </ul>
+
+        <div id="contentList" style="top: 350px"> <!-- Content List -->
+            <ul class="listHideDots" style="padding: 0">
+                <li id="languageRankings">
+                    <div class="contentListItem" onclick="JavaScript: " onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/icon.png"/>
+                        <h2 class="contentListTitle defaultFont" style="font-size: 30px">Programming / Scripting Language Rankings</h2>
+                        <!-- NOTE: Custom font-size should only be included if default size does not fit all text. -->
+                        <h6 class="contentListDescription defaultFont">Template Description</h6>
+                    </div> <!-- Background Div -->
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

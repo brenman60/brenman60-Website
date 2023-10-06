@@ -54,7 +54,7 @@
 }
 
 #contentList ul {
-    width: 100%;
+    width: 95%;
 }
 
 .contentListItem {
@@ -66,16 +66,27 @@
 }
 
 .contentListIcon {
-    display: grid;
+    display: inline-flex;
     margin: 15px 15px 15px 15px;
 }
 
 .contentListTitle {
-    display: inline-block;
+    display: inline-flex;
     text-align: left;
     font-size: 50px;
-    /*max-width: 540px;*/
+    max-width: 540px;
     max-height: 120px;
     margin-top: 10px;
+    overflow: hidden;
+}
+
+.contentListDescription {
+    display: inline-flex;
+    position: absolute;
+    text-align: left;
+    max-height: 210px;
+    margin-top: 80px;
+    margin-left: 310px;
+    font-size: 20px;
     overflow: hidden;
 }
