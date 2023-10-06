@@ -1,11 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\contentPages",
     "\\css",
     "\\images",
+    "\\images\\gameIcons",
+    "\\images\\gameIcons\\played",
     "\\js",
-    "\\template"
+    "\\template",
+    "\\template\\contentPageTemplates"
   ],
-  "SelectedNode": "\\misc.html",
+  "SelectedNode": "\\js\\headerInclude.js",
   "PreviewInSolutionExplorer": false
 }
