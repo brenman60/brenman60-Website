@@ -1,27 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8"/>
-    <title>about | brenman60</title>
+    <title>template | brenman60</title>
     <link rel="icon" href="images/icon.png"/>
     <link href="css/universal.css" rel="stylesheet"/>
     <link href="css/default.css" rel="stylesheet"/>
     <noscript>JavaScript is not supported by this browser.</noscript>
     <script src="js/main.js"></script>
     <script src="js/mouseButtons.js"></script>
-    <script src="js/fallingCodeBackground.js"></script>
 </head>
 <body 
-    onload="
-    JavaScript:
-    loadTitleText('about');
-    startBackground(document.getElementById('backgroundText'));">
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript:
+    loadTitleText('template content page');
+    startSplashes();">
 
     <script src="js/headerInclude.js"></script>
     <script> includeHeader(); </script>
 
+    <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
     <div id="pageContent">
-        <span id="backgroundText"></span>  <!-- Background Text -->
+        <p style="display: inline-flex; position: absolute;">Example page content</p>
+        <img src="images/icon.png" hidden/> <!-- Default images implementation -->
     </div>
 </body>
 </html>

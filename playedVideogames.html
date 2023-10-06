@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <title>played games | brenman60</title>
+    <link rel="icon" href="images/icon.png"/>
+    <link href="css/videogaming.css" rel="stylesheet"/>
+    <link href="css/universal.css" rel="stylesheet"/>
+    <link href="css/default.css" rel="stylesheet"/>
+    <noscript>JavaScript is not supported by this browser.</noscript>
+    <script src="js/main.js"></script>
+    <script src="js/mouseButtons.js"></script>
+    <script src="js/shockwaveSplashesBackground.js"></script>
+</head>
+<body 
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript:
+    loadTitleText('played videogames');
+    startSplashes();">
+
+    <script src="js/headerInclude.js"></script>
+    <script> includeHeader(); </script>
+
+    <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
+    <div id="pageContent">
+        <ul id="subTaskbarItem" class="listHideDots" style="padding: 0">
+            <li>
+                <button id="createdGamesButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('createdGamesButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('createdGamesButton'));"
+                    onclick="JavaScript: loadNewPage('index.html');">
+                my games</button> <!-- Created Games Button -->
+            </li>
+
+            <li>
+                <button id="coolGamesButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('coolGamesButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('coolGamesButton'));"
+                    onclick="JavaScript: loadNewPage('playedVideogames.html');">
+                some good games</button> <!-- Cool Games Button -->
+            </li>
+        </ul>
+
+        <div id="contentList" style="top: 350px"> <!-- Content List -->
+            <ul class="listHideDots" style="padding: 0">
+                <li id="hollowknight">
+                    <div class="contentListItem" onclick="JavaScript: loadNewPage('contentPages/hollowknight.html')" onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/played/hollowknight.png" title="Hollow Knight (2017) by darklinkpower - (steamgriddb.com)"/>
+                        <h2 class="contentListTitle defaultFont">Hollow Knight</h2>
+                        <p class="contentListDescription defaultFont">
+                            Very likely one of the best games I have ever played (and you should too)
+                        </p>
+                    </div> <!-- Background Div -->
+                </li>
+
+                <li id="halflife">
+                    <div class="contentListItem" onclick="JavaScript: " onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/played/halflife.png" title="commons.wikimedia.org"/>
+                        <h2 class="contentListTitle defaultFont">Half-Life</h2>
+                        <p class="contentListDescription defaultFont">
+                            A really good FPS with a very interesting story similar to that of Stephen King's "The Mist"
+                        </p>
+                    </div> <!-- Background Div -->
+                </li>
+
+                <li id="halflife2">
+                    <div class="contentListItem" onclick="JavaScript: " onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/played/halflife2.png" title="commons.wikimedia.org"/>
+                        <h2 class="contentListTitle defaultFont">Half-Life 2</h2>
+                        <p class="contentListDescription defaultFont">
+                            GET OUT OF THE WAY <br>
+                            GET OUT OF THE WAY <br>
+                            GET OUT OF THE WAY <br>
+                            GET OUT OF THE WAY <br>
+                            GET OUT OF THE WAY
+                        </p>
+                    </div> <!-- Background Div -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

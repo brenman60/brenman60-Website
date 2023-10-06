@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <title>hollow knight | brenman60</title>
+    <link rel="icon" href="../images/icon.png"/>
+    <link href="../css/universal.css" rel="stylesheet"/>
+    <link href="../css/default.css" rel="stylesheet"/>
+    <noscript>JavaScript is not supported by this browser.</noscript>
+    <script src="../js/main.js"></script>
+    <script src="../js/mouseButtons.js"></script>
+</head>
+<body 
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript:
+    loadTitleText('hollow knight');
+    startSplashes();">
+
+    <script src="../js/headerInclude.js"></script>
+    <script> includeHeader("../template/header.html"); </script>
+
+    <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
+    <div id="pageContent">
+        <div id="contentList" style="top: 350px"> <!-- Content List -->
+            <ul class="listHideDots" style="padding: 0">
+                <li id="hollowknight">
+                    <div class="contentListItem" onclick="JavaScript: loadNewPage('contentPages/hollowknight.html')">
+                        <h2 class="contentListTitle defaultFont">Good Things</h2>
+                        <p class="contentListDescription defaultFont">
+                            The movement, combat, and overall gameplay is some of the best. The environments themselves are amazing looking and have a ton of details. 
+                        </p>
+                    </div> <!-- Background Div -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
