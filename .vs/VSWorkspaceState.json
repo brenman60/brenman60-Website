@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\js",
     "\\template",
     "\\webgames",
     "\\webgames\\Darkening",
     "\\webgames\\Darkening\\Build"
   ],
-  "SelectedNode": "\\webgames\\Darkening\\Build",
+  "SelectedNode": "\\js\\webGameStatus.js",
   "PreviewInSolutionExplorer": false
 }

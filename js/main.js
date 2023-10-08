@@ -62,3 +62,13 @@ function bounceTitle(titleElement) {
 function unbounceTitle(titleElement) {
     titleElement.style.animationPlayState = "paused";
 }
+
+var hoveringGame = false;
+
+function onGameHover() {
+    hoveringGame = true;
+}
+
+function onGameUnhover() {
+    hoveringGame = false;
+}
