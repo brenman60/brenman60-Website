@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8"/>
-    <title>videogames | brenman60</title>
+    <title>my games | brenman60</title>
     <link rel="icon" href="images/icon.png"/>
     <link href="css/videogaming.css" rel="stylesheet"/>
     <link href="css/universal.css" rel="stylesheet"/>
@@ -16,7 +16,7 @@
     onmousemove="JavaScript: updateMouseCoords(event);"
     onmousedown="JavaScript: spawnShockAtMouse();"
     onload="JavaScript:
-    loadTitleText('videogames');
+    loadTitleText('my games');
     startSplashes();">
 
     <script src="js/headerInclude.js"></script>
@@ -29,7 +29,7 @@
                 <button id="createdGamesButton" class="defaultFont rotateHover defaultButton" 
                     onmouseover="JavaScript: startButtonRotation(document.getElementById('createdGamesButton'));"
                     onmouseout="JavaScript: stopButtonRotation(document.getElementById('createdGamesButton'));"
-                    onclick="JavaScript: loadNewPage('myGames.html');">
+                    onclick="JavaScript: loadNewPage('index.html');">
                 my games</button> <!-- Created Games Button -->
             </li>
 
@@ -41,6 +41,20 @@
                 some good games</button> <!-- Cool Games Button -->
             </li>
         </ul>
+
+        <div id="contentList" style="top: 350px"> <!-- Content List -->
+            <ul class="listHideDots" style="padding: 0">
+                <li id="galaxysprint">
+                    <div class="contentListItem" onclick="JavaScript: loadNewPage('contentPages/galaxysprint.html')" onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/created/galaxysprint.png" title="Galaxy Sprint Logo"/>
+                        <h2 class="contentListTitle defaultFont">Galaxy Sprint</h2>
+                        <p class="contentListDescription defaultFont">
+                            A game I started in around September of 2021, and have been maintaing and updating since.
+                        </p>
+                    </div> <!-- Background Div -->
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
