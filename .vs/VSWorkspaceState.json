@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
     "\\js",
     "\\template",
     "\\webgames",
     "\\webgames\\Darkening",
     "\\webgames\\Darkening\\Build"
   ],
-  "SelectedNode": "\\js\\webGameStatus.js",
+  "SelectedNode": "\\host.py",
   "PreviewInSolutionExplorer": false
 }
