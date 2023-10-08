@@ -156,6 +156,9 @@ window.addEventListener("mousemove", function (e) {
 });
 
 window.addEventListener("mousedown", function () {
+    if (hoveringGame)
+        return;
+
     spawnShockAtMouse();
 });
 

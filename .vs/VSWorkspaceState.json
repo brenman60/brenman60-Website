@@ -1,15 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\contentPages",
-    "\\css",
-    "\\images",
-    "\\images\\gameIcons",
-    "\\images\\gameIcons\\played",
-    "\\js",
     "\\template",
-    "\\template\\contentPageTemplates"
+    "\\webgames",
+    "\\webgames\\Darkening",
+    "\\webgames\\Darkening\\Build"
   ],
-  "SelectedNode": "\\js\\headerInclude.js",
+  "SelectedNode": "\\webgames\\Darkening\\Build",
   "PreviewInSolutionExplorer": false
 }
