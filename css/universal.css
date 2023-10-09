@@ -68,7 +68,7 @@
 .contentListIcon {
     display: inline-flex;
     margin: 15px 15px 15px 15px;
-    object-fit: cover;
+    width: 270px;
 }
 
 .contentListTitle {
