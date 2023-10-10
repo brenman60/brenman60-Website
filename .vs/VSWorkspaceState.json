@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\contentPages",
-    "\\css",
+    "\\images",
+    "\\images\\gameIcons",
     "\\images\\gameIcons\\created",
-    "\\js",
     "\\webgames\\Darkening",
     "\\webgames\\Darkening\\Build"
   ],
-  "SelectedNode": "\\contentPages\\galaxysprint.html",
   "PreviewInSolutionExplorer": false
 }
