@@ -25,8 +25,7 @@ async function everythingTransparent() {
     var currentTime = Date.now();
     var deltaTime = (currentTime - lastTimeFrame) / 1000;
 
-    pageContent.style.opacity -= 100 * deltaTime;
-    console.log(pageContent.style.opacity);
+    pageContent.style.opacity -= 1 * deltaTime;
 
     window.requestAnimationFrame(everythingTransparent);
 }
