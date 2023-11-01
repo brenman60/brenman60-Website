@@ -1,10 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
     "\\images",
     "\\images\\gameIcons",
-    "\\images\\gameIcons\\created"
+    "\\images\\gameIcons\\created",
+    "\\js",
+    "\\template"
   ],
-  "SelectedNode": "\\misc.html",
+  "SelectedNode": "\\js\\mouseButtons.js",
   "PreviewInSolutionExplorer": false
 }
