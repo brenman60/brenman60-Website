@@ -1,7 +1,7 @@
 ﻿body {
     display: flex;
     justify-content: center;
-    background-color: #25383C;
+    background-color: #2fad59;
 }
 
 #pageTitle {
@@ -18,9 +18,9 @@
 }
 
 .defaultButton {
-    background-color: #5F9EA0;
+    background-color: #228a45;
     border: none;
-    color: #25383C;
+    color: #0f4a23;
     font-size: 30px;
     font-weight: bolder;
     width: fit-content;
@@ -53,7 +53,7 @@
     z-index: -999;
     user-select: none;
     opacity: 0.05;
-    background-color: #25383C;
+    background-color: #2fad59;
     animation-name: backgroundTextLerp;
     animation-duration: 2s;
     animation-direction: alternate;
