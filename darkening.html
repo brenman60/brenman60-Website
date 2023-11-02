@@ -24,6 +24,16 @@
     <div id="pageContent">
         <span id="backgroundText"></span>  <!-- Background Text -->
 
+        <span id="loadingProgressText" class="defaultFont"> Game is Loading: 0% </span>
+
+        <script>
+            var realLoadingStatus = document.getElementById("unity-progress-bar-full");
+            var fakeLoadingStatus = document.getElementById("loadingProgressText");
+            do {
+                fakeLoadingStatus.innerHTML = "Game is loading: " + realLoadingStatus.style.width;
+            } while (realLoadingStatus.style.width != "100%");
+        </script>
+
         <div id="unity-container" class="unity-desktop"></div>
         <canvas id="unity-canvas" width=960 height=600 tabindex="-1" onmouseover="JavaScript: onGameHover();" onmouseout="JavaScript: onGameUnhover();"></canvas>
         <div id="unity-loading-bar">

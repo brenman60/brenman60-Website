@@ -3,3 +3,9 @@
     position: absolute;
     top: 280px;
 }
+
+#loadingProgressText {
+    display: flex;
+    position: absolute;
+    top: 280px;
+}
