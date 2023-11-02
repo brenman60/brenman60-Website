@@ -49,7 +49,7 @@
                 var realLoadingStatus = document.getElementById("unity-progress-bar-full");
                 var fakeLoadingStatus = document.getElementById("loadingProgressText");
                 do {
-                    console.log(realLoadingStatus.style.width);
+                    
                     fakeLoadingStatus.innerHTML = "Game is loading: " + realLoadingStatus.style.width;
                     await sleep(.05 * 1000);
                 } while (realLoadingStatus.style.width != "100%");
