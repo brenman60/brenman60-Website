@@ -100,7 +100,7 @@ function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpac
     shockwave.style.left = (position.x - size.x / 2) + "px";
     shockwave.style.width = size.x + "px";
     shockwave.style.height = size.y + "px";
-    shockwave.style.backgroundColor = "#65b8ba";
+    shockwave.style.backgroundColor = "#228a45";
     shockwave.style.opacity = customOpacity == -1 ? .5 : customOpacity;
     shockwave.style.zIndex = 100;
     shockwave.style.pointerEvents = "none";
