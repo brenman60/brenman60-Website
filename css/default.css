@@ -19,39 +19,12 @@ body {
 
 .defaultButton {
     border: none;
-    color: #0f4a23;
     font-size: 30px;
     font-weight: bolder;
     width: fit-content;
     height: 50px;
     padding: 0px 10px;
     user-select: none;
-}
-
-.defaultButton button:hover {
-    animation-name: buttonHover;
-    animation-duration: .25s;
-    animation-direction: normal;
-    animation-iteration-count: initial;
-    animation-timing-function: ease-in-out;
-}
-
-.defaultButton button:not(:hover) {
-    animation-name: buttonHover;
-    animation-duration: .25s;
-    animation-direction: reverse;
-    animation-iteration-count: initial;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes buttonHover {
-    from {
-        transform: translateY(-5px);
-    }
-
-    to {
-        transform: translateY(5px);
-    }
 }
 
 #taskbarItem {

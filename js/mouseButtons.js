@@ -28,7 +28,7 @@ function updateShockwaves() {
             continue;
         }
 
-        var sizeChange = ((70 * shockwave.getIntensity()) * deltaTime);
+        var sizeChange = ((100 * shockwave.getIntensity()) * deltaTime);
 
         // change sizes
         var currentWidthNum = parseFloat(shockwave.getElement().style.width.toString().replace("px", ""));
@@ -70,28 +70,6 @@ function updateShockwaves() {
     lastTimeFrame = currentTime;
 
     window.requestAnimationFrame(updateShockwaves);
-}
-
-function startButtonRotation(element, changeColor = true) {
-    //element.style.transform = "scale(105%, 105%)";
-    element.style.transform = "position(100%, 95%)";
-
-    if (changeColor) {
-        //element.style.backgroundColor = "#1b7539";
-    }
-
-    element.style.transition = "transform .5s ease-out";
-}
-
-function stopButtonRotation(element, changeColor = true) {
-    //element.style.transform = "scale(100%, 100%)";
-    element.style.transform = "position(100%, 100%)";
-
-    if (changeColor) {
-        //element.style.backgroundColor = "#228a45";
-    }
-
-    element.style.transition = "all .5s ease-in";
 }
 
 function buttonShockwave(position, size, intensity = 1, fadeTime = 1, customOpacity = -1, customFadeSpeed = -1) {
@@ -150,7 +128,7 @@ function spawnShockAtMouse() {
         return;
     }
 
-    buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(6, 6), .25, .025);
+    buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(6, 6), .50, .025);
 }
 
 window.addEventListener("mousemove", function (e) {

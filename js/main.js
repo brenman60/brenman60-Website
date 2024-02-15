@@ -5,10 +5,16 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+var loadingPage = false;
 async function loadNewPage(newPageLink) {
     if (newPageLink == "" || newPageLink == undefined) {
         throw new Error("Tried loading new page, but given link is empty or undefined!");
     }
+
+    if (loadingPage)
+        return;
+    else
+        loadingPage = true;
 
     window.requestAnimationFrame(everythingTransparent);
 
