@@ -148,7 +148,7 @@ function spawnShockAtMouse() {
         return;
     }
 
-    buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(5, 5), .75, .025);
+    buttonShockwave(new Vector2(mouseX, mouseY), new Vector2(6, 6), .25, .025);
 }
 
 window.addEventListener("mousemove", function (e) {

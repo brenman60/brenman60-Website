@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <title>my games | brenman60</title>
+    <link rel="icon" href="images/icon.png"/>
+    <link href="css/videogaming.css" rel="stylesheet"/>
+    <link href="css/universal.css" rel="stylesheet"/>
+    <link href="css/default.css" rel="stylesheet"/>
+    <noscript>JavaScript is not supported by this browser.</noscript>
+    <script src="js/main.js"></script>
+    <script src="js/mouseButtons.js"></script>
+</head>
+<body 
+    onmousemove="JavaScript: updateMouseCoords(event);"
+    onmousedown="JavaScript: spawnShockAtMouse();"
+    onload="JavaScript:
+    loadTitleText('Projects');
+    startSplashes();">
+
+    <script src="js/headerInclude.js"></script>
+    <script> includeHeader(); </script>
+
+    <!-- INVIDUAL PAGE CONTENT GOES UNDER HERE -->
+    <div id="pageContent">
+        <ul id="subTaskbarItem" class="listHideDots" style="padding: 0">
+            <li>
+                <button id="createdGamesButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('createdGamesButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('createdGamesButton'));"
+                    onclick="JavaScript: loadNewPage('myGames.html');">
+                my games</button> <!-- Created Games Button -->
+            </li>
+
+            <li>
+                <button id="coolGamesButton" class="defaultFont rotateHover defaultButton" 
+                    onmouseover="JavaScript: startButtonRotation(document.getElementById('coolGamesButton'));"
+                    onmouseout="JavaScript: stopButtonRotation(document.getElementById('coolGamesButton'));"
+                    onclick="JavaScript: loadNewPage('playedVideogames.html');">
+                some good games</button> <!-- Cool Games Button -->
+            </li>
+        </ul>
+
+        <div id="contentList" style="top: 350px"> <!-- Content List -->
+            <ul class="listHideDots" style="padding: 0">
+                <li id="galaxysprint">
+                    <div class="contentListItem" onclick="JavaScript: loadNewPage('contentPages/galaxysprint.html')" onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/created/galaxysprint.png" title="Galaxy Sprint Logo"/>
+                        <h2 class="contentListTitle defaultFont">Galaxy Sprint</h2>
+                        <p class="contentListDescription defaultFont">
+                            A game I started in around September of 2021, and have been maintaining and updating since.
+                        </p>
+                    </div>
+                </li>
+
+                <li id="darkening">
+                    <div class="contentListItem" onclick="JavaScript: loadNewPage('darkening.html')" onmouseover="JavaScript: startButtonRotation(this, false);" onmouseout="JavaScript: stopButtonRotation(this, false);">
+                        <img class="contentListIcon" src="images/gameIcons/created/darkening.png" title="Darkening Logo"/>
+                        <h2 class="contentListTitle defaultFont">Darkening</h2>
+                        <p class="contentListDescription defaultFont">
+                            A Five Nights at Freddy's style game made in a week as a challenge against a friend.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
