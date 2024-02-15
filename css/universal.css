@@ -114,3 +114,14 @@
 }
 
 /* Universal Colors Section */
+.backgroundColor {
+    background-color: darkgray;
+}
+
+.buttonColor {
+    background-color: dimgray;
+}
+
+.buttonColor button:hover {
+    background-color: darkblue;
+}
