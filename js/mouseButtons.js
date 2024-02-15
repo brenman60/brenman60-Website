@@ -28,7 +28,7 @@ function updateShockwaves() {
             continue;
         }
 
-        var sizeChange = ((10 * shockwave.getIntensity()) * deltaTime);
+        var sizeChange = ((70 * shockwave.getIntensity()) * deltaTime);
 
         // change sizes
         var currentWidthNum = parseFloat(shockwave.getElement().style.width.toString().replace("px", ""));
